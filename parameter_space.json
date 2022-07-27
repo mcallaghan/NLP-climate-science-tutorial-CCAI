@@ -1,0 +1,17 @@
+[
+    {
+        "vect__max_df": [0.5, 0.8], 
+        "vect__min_df": [5, 15], 
+        "vect__ngram_range": [[1, 1], [1, 2]],  
+        "clf__kernel": ["rbf"], 
+        "clf__gamma": [1e-3, 1e-4],
+        "clf__C": [1, 1e1, 1e2]
+    },
+    {
+        "vect__max_df": [0.5,0.8],
+        "vect__min_df": [5, 15],
+        "vect__ngram_range": [[1, 1], [1, 2]],  
+        "clf__kernel": ["linear"], 
+        "clf__C": [1, 1e1, 1e2]
+    }
+]
