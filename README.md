@@ -1,4 +1,18 @@
+# NLP for evidence synthesis in climate change research
+
 This repository contains materials for a tutorial on using NLP in research synthesis in the field of climate change. The following gives an outline of the tutorial.
+
+# Contents
+
+- [0_introduction.md](0_introduction.md) gives an introduction to the topic, motivating why we do this work, and setting out the kinds of methods available
+- [A_obtaining_data.ipynb](A_obtaining_data.ipynb) takes us through getting scientific texts using the open source OpenAlex API
+- [B_model_pipeline.ipynb](B_model_pipeline.ipynb) shows us how we can build a pipeline to learn from texts and labels
+- [C_evaluation.ipynb](C_evaluation.ipynb) shows us how we can evaluate the results of a model, and how we can choose and evaluate model hyperparameters
+- [D_run_cv_experiments.py](D_run_cv_experiments.py) is an example script showing how we can run cross-validation experiments to select a model and estimate its generalisation performance.
+- [E_viz_cv_experiments.ipynb](E_viz_cv_experiments.ipynb) contains a couple of example plots to visualize the results of our cv experiments
+- [F_geoparse_texts.ipynb](F_geoparse_texts.ipynb) shows how to run a geoparser to extract place mentions from our texts and resolve these to structured geographic information
+- [G_match_studies_gridcells.ipynb](G_match_studies_gridcells.ipynb) shows how to match place names to grid cells
+- [H_mapping_results](H_mapping_results.ipynb) shows us how to plot these results on a map
 
 # Synopsis
 

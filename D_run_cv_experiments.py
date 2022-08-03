@@ -1,4 +1,10 @@
-# First we need to load the data
+#########################################
+# WARNING! This script is optimized     #
+# for readability not for performance   #
+# consider parallelising the many loops #
+# and saving intermediate results       #
+#########################################
+
 import argparse
 import pandas as pd
 import numpy as np
@@ -6,13 +12,6 @@ import re
 import random
 import os
 import json
-from sklearn.svm import SVC
-from sklearn.multiclass import OneVsRestClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import ParameterGrid, KFold
-from sklearn.metrics import f1_score, recall_score, precision_score
-
 
 def load_data(test):
     labelled_data = pd.read_csv("data/labelled_data.csv")
@@ -69,11 +68,19 @@ def get_best_param(scores, scorer):
 
 
 def main(y_prefix, n_splits, test):
+    from sklearn.svm import SVC
+    from sklearn.multiclass import OneVsRestClassifier
+    from sklearn.pipeline import Pipeline
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.model_selection import ParameterGrid, KFold
+    from sklearn.metrics import f1_score, recall_score, precision_score
+    
     # Get our data
     df = load_data(test)
 
     X = df["abstract"].values
     cols = [x for x in df.columns if re.match(f"^{y_prefix}", x)]
+
     if len(cols)==1:
         cols = cols[0]
         # We need to use a pipeline for a binary classifier
@@ -121,7 +128,7 @@ def main(y_prefix, n_splits, test):
         parameter_combinations = random.choices(parameter_combinations, k=5)
 
     with open("parameter_combinations.json", "w") as fp:
-        json.dump(parameter_combinations, fp)
+        json.dump(parameter_combinations, fp, indent=2)
 
     metrics = [f1_score, precision_score, recall_score]
 
@@ -131,53 +138,60 @@ def main(y_prefix, n_splits, test):
     inner_fold = KFold(n_splits=n_splits)
     outer_fold = KFold(n_splits=n_splits)
 
-    outer_results = []
-    outer_search_results = []
+    if os.path.exists(f"outer_param_search_{n_splits}_splits.json"):
+        with open(f"outer_param_search_{n_splits}_splits.json", "r") as fp:
+            outer_search_results = json.load(fp)
+    else:
+        outer_results = []
+        outer_search_results = []
 
-    # Do the nested loop
+        # Do the nested loop
+        for i, (o_train_index, test_index) in enumerate(outer_fold.split(labelled_index)):
+            # If we have already done this before, load the results
+            if os.path.exists(f"inner_results_{i}_from_{n_splits}_splits.json"):
+                with open(f"inner_results_{i}_from_{n_splits}_splits.json", "r") as fp:
+                    inner_results = json.load(fp)
+            else:
+                #########################
+                # TUNE PARAMETERS
+                inner_results = []
+                for j, (i_train_index, i_val_index) in enumerate(inner_fold.split(o_train_index)):
+                    for k, param_set in enumerate(parameter_combinations):
+                        scores = fit_eval_model(
+                            pipeline, param_set, X[labelled_index[o_train_index]], y[labelled_index[o_train_index]],
+                            i_train_index, i_val_index, metrics
+                        )
+                        scores["param_id"] = k
+                        inner_results.append(scores)
 
-    for i, (o_train_index, test_index) in enumerate(outer_fold.split(labelled_index)):
-        #########################
-        # TUNE PARAMETERS
-        inner_results = []
-        for j, (i_train_index, i_val_index) in enumerate(inner_fold.split(o_train_index)):
-            for k, param_set in enumerate(parameter_combinations):
-                scores = fit_eval_model(
-                    pipeline, param_set, X[labelled_index[o_train_index]], y[labelled_index[o_train_index]],
-                    i_train_index, i_val_index, metrics
-                )
-                scores["param_id"] = k
-                inner_results.append(scores)
+                with open(f"inner_results_{i}_from_{n_splits}_splits.json", "w") as fp:
+                    json.dump(inner_results, fp, indent=2)
 
-        with open(f"inner_results_{i}_from_{n_splits}_splits.json", "w") as fp:
-            json.dump(inner_results, fp, indent=2)
-
-        #######################
-        # EVALUATE MODELS
-        # fit a model with the best parameters on inner cv, and get the score
-        best_param_id = get_best_param(inner_results, scorer)
-        scores = fit_eval_model(
-            pipeline, parameter_combinations[best_param_id], X[labelled_index], y[labelled_index],
-            o_train_index, test_index, metrics
-        )
-        outer_results.append(scores)
-
-        ######################
-        # SEARCH PARAMETERS
-        # Now do parameter search on the outer data
-        for k, param_set in enumerate(parameter_combinations):
+            #######################
+            # EVALUATE MODELS
+            # fit a model with the best parameters on inner cv, and get the score
+            best_param_id = get_best_param(inner_results, scorer)
             scores = fit_eval_model(
-                pipeline, param_set, X[labelled_index], y[labelled_index],
+                pipeline, parameter_combinations[best_param_id], X[labelled_index], y[labelled_index],
                 o_train_index, test_index, metrics
             )
-            scores["param_id"] = k
-            outer_search_results.append(scores)
+            outer_results.append(scores)
 
-    with open(f"outer_results_{n_splits}_splits.json", "w") as fp:
-        json.dump(outer_results, fp, indent=2)
+            ######################
+            # SEARCH PARAMETERS
+            # Now do parameter search on the outer data
+            for k, param_set in enumerate(parameter_combinations):
+                scores = fit_eval_model(
+                    pipeline, param_set, X[labelled_index], y[labelled_index],
+                    o_train_index, test_index, metrics
+                )
+                scores["param_id"] = k
+                outer_search_results.append(scores)
 
-    with open(f"outer_param_search_{n_splits}_splits.json", "w") as fp:
-        json.dump(outer_results, fp, indent=2)
+        with open(f"outer_results_{n_splits}_splits.json", "w") as fp:
+            json.dump(outer_results, fp, indent=2)
+        with open(f"outer_param_search_{n_splits}_splits.json", "w") as fp:
+            json.dump(outer_search_results, fp, indent=2)
 
     ######################
     # MAKE PREDICTIONS
@@ -188,7 +202,12 @@ def main(y_prefix, n_splits, test):
 
     # These are our final results!
     y_pred = clf.predict_proba(X[unlabelled_index])
-    df = pd.DataFrame.from_dict({"OA_id": df.iloc[unlabelled_index]["OA_id"], "prediction": y_pred[:,1]})
+    df = pd.DataFrame.from_dict({"OA_id": df.iloc[unlabelled_index]["OA_id"]})
+    if y.ndim==1:
+        df[f"{cols}_prediction"] = y_pred[:,1]
+    else :
+        for i, col in enumerate(cols):
+            df[f"{col}_prediction"] = y_pred[:,i]
     df.to_csv(f"predictions_{n_splits}_splits.csv", index=False)
     return "Success! Tuned parameters, evaluated our models and made predictions"
 
