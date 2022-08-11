@@ -27,21 +27,6 @@ During the course of the tutorial participants will gain an understanding of the
 - Choosing hyperparameters and evaluating models
 - Mapping research
 
-# Dependencies
-
-A requirements.txt file has been provided to set up a virtualenv environment named ccai-nlp-climate-science that should contain all necessary dependencies.
-
-To install and use this environment, follow the steps below:
-
-1. Install virtualenv via pip: `pip install virtualenv`. You may need to use `sudo pip install virtualenv` (virtualenv command is only recognised for a root user). 
-2. Ensure you are at the base level of this repository and create a new virtual environment via `virtualenv ccai-nlp-climate-science`.
-3. Activate your new virtualenv via `source ccai-nlp-climate-science/bin/activate`.
-4. Install the necessary dependencies into the virtualenv via `pip install -r requirements.txt`. 
-5. Make this environment accessible from Jupyter via `python -m ipykernel install --user --name=ccai-nlp-climate-science`.
-6. Finally, from within your virtualenv, spin up JupyterLab. Once within a notebook you should see the option to switch to the `ccai-nlp-climate-science` environment.
-7. To exit the virtual environment in your terminal window, you can run `deactivate`.
-8. To activate the virtual environment in the future, run `source ccai-nlp-climate-science/bin/activate` from the root level of this repository.
-
 # Schedule
 
 ## Introduction to "Big Literature" and machine-learning assisted evidence synthesis
