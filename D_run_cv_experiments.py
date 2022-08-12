@@ -5,6 +5,10 @@
 # and saving intermediate results       #
 #########################################
 
+# TODO: I feel like this might be better as a notebook to match the format of the rest of the material
+# it would also be easier to run through and execute the cells, rather than run this script via the terminal 
+# to output the results for the next step
+
 import argparse
 import pandas as pd
 import numpy as np
@@ -120,7 +124,7 @@ def main(y_prefix, n_splits, test):
     # Create a directory to store our results if it does not already exist, and change into it if it does
     data_path = f"cv_data/{y_prefix}"
     if not os.path.isdir(data_path):
-        os.mkdir(data_path)
+        os.makedirs(data_path)
     os.chdir(data_path)
 
     parameter_combinations = list(ParameterGrid(parameters))
@@ -215,14 +219,14 @@ def main(y_prefix, n_splits, test):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run a cross validation experiment on our labelled data")
     parser.add_argument(
-        "y_prefix", type=str,
+        "--y_prefix", type=str,
         help="Variables in the data starting with this prefix will become our target variable"
     )
     parser.add_argument(
-        "n_splits", type=int,
+        "--n_splits", type=int,
     )
     parser.add_argument(
-        "--test", action=argparse.BooleanOptionalAction
+        "--test", type=str
     )
     args = parser.parse_args()
     main(args.y_prefix, args.n_splits, args.test)
