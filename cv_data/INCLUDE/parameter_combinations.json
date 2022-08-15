@@ -1,0 +1,770 @@
+[
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__gamma": 0.0001,
+    "clf__kernel": "rbf",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 1,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 10.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.5,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 5,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      1
+    ]
+  },
+  {
+    "clf__C": 100.0,
+    "clf__kernel": "linear",
+    "vect__max_df": 0.8,
+    "vect__min_df": 15,
+    "vect__ngram_range": [
+      1,
+      2
+    ]
+  }
+]

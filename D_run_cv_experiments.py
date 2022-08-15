@@ -5,10 +5,6 @@
 # and saving intermediate results       #
 #########################################
 
-# TODO: I feel like this might be better as a notebook to match the format of the rest of the material
-# it would also be easier to run through and execute the cells, rather than run this script via the terminal 
-# to output the results for the next step
-
 import argparse
 import pandas as pd
 import numpy as np
@@ -226,7 +222,7 @@ if __name__ == "__main__":
         "--n_splits", type=int,
     )
     parser.add_argument(
-        "--test", type=str
+        "--test", action='store_true'
     )
     args = parser.parse_args()
     main(args.y_prefix, args.n_splits, args.test)
