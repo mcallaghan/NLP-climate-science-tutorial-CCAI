@@ -24,7 +24,8 @@ def load_data(test):
     # Now we load the Open alex data, and create the same title variable for merging
 
     oa_data = pd.read_csv("data/openalex_data.csv").rename(columns={"id": "OA_id"})
-    oa_data["title_lcase"] = oa_data["title"].apply(lambda x: re.sub(r"\W", "", x).lower())
+    oa_data = oa_data.dropna(subset=["title"])
+    oa_data["title_lcase"] = oa_data["title"].astype(str).apply(lambda x: re.sub(r"\W", "", x).lower())
 
     # Get only those rows which don't match the labels
     oa_data = oa_data[~oa_data["title_lcase"].isin(labelled_data["title_lcase"])]
