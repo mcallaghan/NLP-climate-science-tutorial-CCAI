@@ -12,19 +12,22 @@ This repository contains materials for a tutorial on using NLP in research synth
 - [E_viz_cv_experiments.ipynb](E_viz_cv_experiments.ipynb) contains a couple of example plots to visualize the results of our cv experiments
 - [F_geoparse_texts.ipynb](F_geoparse_texts.ipynb) shows how to run a geoparser to extract place mentions from our texts and resolve these to structured geographic information
 - [G_match_studies_gridcells.ipynb](G_match_studies_gridcells.ipynb) shows how to match place names to grid cells
-- [H_mapping_results](H_mapping_results.ipynb) shows us how to plot these results on a map
-
+- [H_mapping_results.ipynb](H_mapping_results.ipynb) shows us how to plot these results on a map
+- [I_conclusion.md](I_conclusion.md) concludes the tutorial and gives an outlook on what these methods can be used for.
 # Setup
 
-The best way to run these notebooks in Colab is to connect to google drive and clone the repository. To do this open a new Colab notebook and enter the following:
+The best way to run these notebooks in Colab is to connect to 
+google drive and clone the repository. 
+To do this open a new Colab notebook and enter the following:
 
 ```
 from google.colab import drive
 import os
 drive.mount('/content/drive')
 os.chdir("/content/drive/MyDrive")
-!git clone https://github.com/mcallaghan/NLP-climate-science-tutorial-CCAI
+! git clone https://github.com/mcallaghan/NLP-climate-science-tutorial-CCAI
 ```
+
 
 You can also run the notebooks locally. To do that you will need to clone the repository, set up a virtual environment, and install the packages specified in the requirements.txt file
 
